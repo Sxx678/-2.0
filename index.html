@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茶叶销售网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">主页</a></li>
+                <li><a href="#products" onclick="showSection('products')">产品分类</a></li>
+                <li><a href="#story" onclick="showSection('story')">品牌故事</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="content-section">
+            <div class="home-slides">
+                <div class="home-slide" style="background-image: url('images/详情页背景/7.jpg');">
+                    <div class="slide-content">
+                        <h1>以茶为媒，定制专属味道</h1>
+                        <p>我们致力于传承茶文化的精髓，以匠心与创新为核心，打造真正属于您的私人定制茶。</p>
+                        <a href="#products" class="cta-button" onclick="showSection('products')">探索更多</a>
+                    </div>
+                </div>
+                <div class="home-slide" style="background-image: url('images/详情页背景/8.jpg');">
+                    <div class="slide-content">
+                        <h2>定制的不只是茶，更是生活的态度与美好体验</h2>
+                        <p>在快节奏的现代生活中，我们希望通过一杯定制茶，为您带来片刻宁静与专属仪式感。</p>
+                        <a href="#story" class="cta-button" onclick="showSection('story')">了解我们</a>
+                    </div>
+                </div>
+                <div class="slide-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="content-section">
+            <h2>产品分类</h2>
+            <div class="product-category">
+                <div class="product">
+                    <a href="product-detail.html?product=霸气山普洱茶">
+                        <div class="product-carousel">
+                            <img src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）1.jpg" alt="霸气山普洱茶（生茶）">
+                            <img src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）2.jpg">
+                            <img src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）3.jpg">
+                            <img src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）4.jpg">
+                        </div>
+                        <h3>霸气山普洱茶（生茶）</h3>
+                        <p>独特风味的生普洱茶</p>
+                        <p>价格: ¥200</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="gushu-white.html">
+                        <div class="product-carousel">
+                            <img src="images/古树白茶.jpg/古树白茶.jpg/古树白茶1.jpg" alt="古树白茶">
+                            <img src="images/古树白茶.jpg/古树白茶.jpg/古树白茶2.jpg" alt="古树白茶">
+                        </div>
+                        <h3>古树白茶</h3>
+                        <p>清新淡雅的白茶</p>
+                        <p>价格: ¥220</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="bingshan-black.html">
+                        <div class="product-carousel">
+                            <img src="images/丙山红茶.jpg/丙山红茶/丙山红茶1.jpg" alt="丙山红茶">
+                            <img src="images/丙山红茶.jpg/丙山红茶/丙山红茶2.jpg" alt="丙山红茶">
+                        </div>
+                        <h3>丙山红茶</h3>
+                        <p>香醇浓郁的红茶</p>
+                        <p>价格: ¥150</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="bingshan-puer.html">
+                        <div class="product-carousel">
+                            <img src="images/丙山普洱茶（生茶）.jpg/丙山普洱茶（生茶）/丙山普洱茶（生茶）1.jpg" alt="丙山普洱茶（生茶）">
+                            <img src="images/丙山普洱茶（生茶）.jpg/丙山普洱茶（生茶）/丙山普洱茶（生茶）2.jpg" alt="丙山普洱茶（生茶）">
+                            <img src="images/丙山普洱茶（生茶）.jpg/丙山普洱茶（生茶）/丙山普洱茶（生茶）3.jpg" alt="丙山普洱茶（生茶）">
+                        </div>
+                        <h3>丙山普洱茶（生茶）</h3>
+                        <p>经典生普洱茶</p>
+                        <p>价格: ¥180</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="wuliangfo.html">
+                        <div class="product-carousel">
+                            <img src="images/无量佛.jpg/无量佛/无量佛1.jpg" alt="无量佛">
+                            <img src="images/无量佛.jpg/无量佛/无量佛2.jpg" alt="无量佛">
+                            <img src="images/无量佛.jpg/无量佛/无量佛3.jpg" alt="无量佛">
+                        </div>
+                        <h3>无量佛</h3>
+                        <p>独特风味的茶品</p>
+                        <p>价格: ¥250</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="xiaohuangtian-puer.html">
+                        <div class="product-carousel">
+                            <img src="images/小荒田普洱茶（生茶）.jpg/小荒田普洱茶（生茶）/小荒田普洱茶（生茶）1.jpg" alt="小荒田普洱茶（生茶）">
+                            <img src="images/小荒田普洱茶（生茶）.jpg/小荒田普洱茶（生茶）/小荒田普洱茶（生茶）2.jpg" alt="小荒田普洱茶（生茶）">
+                            <img src="images/小荒田普洱茶（生茶）.jpg/小荒田普洱茶（生茶）/小荒田普洱茶（生茶）3.jpg" alt="小荒田普洱茶（生茶）">
+                        </div>
+                        <h3>小荒田普洱茶（生茶）</h3>
+                        <p>醇厚的生普洱茶</p>
+                        <p>价格: ¥190</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="story" class="content-section" style="display: none;">
+            <h2>品牌故事</h2>
+            <div class="story-container">
+                <div class="story-item">
+                    <div class="story-image" style="background-image: url('images/故事1豆腐寨/豆腐寨.jpg');">
+                        <div class="story-overlay">
+                            <h3>豆腐寨</h3>
+                            <p>豆腐寨，位于云南省普洱市澜沧县，海拔2100米，是一个以拉祜族为主的古老村寨。这里的茶树多为百年以上的古树，受当地独特的地理环境和气候条件影响，产出的茶叶具有独特的香气和口感。村民们世代以制茶为生，传承着古老的制茶工艺。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-image" style="background-image: url('images/故事2霸气山/dc3c6546df9439968fbf6407fc23921.jpg');">
+                        <div class="story-overlay">
+                            <h3>霸气山</h3>
+                            <p>霸气山茶区位于云南省普洱市，是著名的古树茶产区之一。这里的茶树大多生长在海拔1800-2200米的山区，树龄普遍在百年以上。得天独厚的地理位置和气候条件，造就了霸气山茶独特的"霸气"韵味，茶汤醇厚，回甘持久。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-image" style="background-image: url('images/故事3大户寨/大户寨合照.jpg');">
+                        <div class="story-overlay">
+                            <h3>大户寨</h3>
+                            <p>大户寨是云南著名的古老茶村，这里的村民世代与茶为伴。村中保存着大量百年以上的古茶树，采用传统的制茶工艺，每一片茶叶都凝聚着茶农的匠心。大户寨的茶以其独特的蜜香和醇厚的口感而闻名。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-image" style="background-image: url('images/故事4小荒田/看茶3.jpg');">
+                        <div class="story-overlay">
+                            <h3>小荒田</h3>
+                            <p>小荒田茶区以其独特的地理环境和优质的茶叶品质而闻名。这里的茶树生长在海拔2000米左右的山区，四季云雾缭绕，为茶树的生长提供了理想的自然条件。小荒田的茶以其清爽甘甜、回甘持久的特点深受茶友喜爱。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-image" style="background-image: url('images/故事5古树王/26805a5202e2fd75f8e3de687cc828b.jpg');">
+                        <div class="story-overlay">
+                            <h3>古树王</h3>
+                            <p>古树王茶区是云南最著名的古树茶产区之一，这里有数百年树龄的古茶树。每一棵古树都承载着悠久的历史和文化，采摘的茶叶经过传统工艺精心制作，成就了独特的古树茶品质。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-image" style="background-image: url('images/故事6冰岛/d99ae1606f5135dfc0cc34c33b545a2.jpg');">
+                        <div class="story-overlay">
+                            <h3>冰岛</h3>
+                            <p>冰岛茶区因其特殊的地理位置和气候条件而得名。这里常年云雾缭绕，昼夜温差大，为茶树生长提供了得天独厚的自然环境。冰岛茶以其清冽甘甜、滑润爽口的特点而著称。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-image" style="background-image: url('images/故事7丙山/e1943d6a6c7190c90901f4de9587673.jpg');">
+                        <div class="story-overlay">
+                            <h3>丙山</h3>
+                            <p>丙山茶区是云南传统的制茶区域，这里的茶农世代传承着精湛的制茶技艺。丙山的茶树生长在海拔1800米以上的山区，茶叶品质优异，以其独特的香气和醇厚的口感而闻名。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 茶叶销售网站. 保留所有权利.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousels = document.querySelectorAll('.product-carousel, .story-carousel');
+            carousels.forEach(carousel => {
+                let currentIndex = 0;
+                const items = carousel.querySelectorAll('img, .story');
+                let interval;
+
+                carousel.addEventListener('mouseenter', () => {
+                    interval = setInterval(() => {
+                        items[currentIndex].style.display = 'none';
+                        currentIndex = (currentIndex + 1) % items.length;
+                        items[currentIndex].style.display = 'block';
+                    }, 900); // 每0.9秒切换一次图片
+                });
+
+                carousel.addEventListener('mouseleave', () => {
+                    clearInterval(interval);
+                    items.forEach((item, index) => {
+                        item.style.display = index === 0 ? 'block' : 'none';
+                    });
+                    currentIndex = 0;
+                });
+            });
+
+            // 添加主页幻灯片控制
+            const slides = document.querySelectorAll('.home-slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+
+            // 初始化显示第一张幻灯片
+            slides[0].style.opacity = '1';
+
+            // 自动切换幻灯片
+            setInterval(() => {
+                changeSlide((currentSlide + 1) % slides.length);
+            }, 5000);
+
+            // 点击圆点切换幻灯片
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    changeSlide(index);
+                });
+            });
+
+            function changeSlide(index) {
+                slides[currentSlide].style.opacity = '0';
+                dots[currentSlide].classList.remove('active');
+                currentSlide = index;
+                slides[currentSlide].style.opacity = '1';
+                dots[currentSlide].classList.add('active');
+            }
+
+            // 默认显示主页
+            showSection('home');
+        });
+    </script>
+</body>
+</html> 

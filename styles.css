@@ -1,0 +1,874 @@
+body {
+    font-family: 'Noto Serif SC', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#products {
+    padding: 50px 20px;
+    text-align: center;
+    background-image: url('images/风景背景.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.product-category {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product-carousel {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.product-carousel img:first-child {
+    display: block;
+}
+
+#story {
+    padding: 0;
+    background: transparent;
+}
+
+#story h2 {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 2.5em;
+}
+
+.story-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.story-carousel {
+    width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.story {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+.story:first-child {
+    display: block;
+}
+
+.story-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: -10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#product-detail {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-images img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.product-info {
+    margin-top: 20px;
+}
+
+#reviews {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.review-form {
+    margin-bottom: 20px;
+}
+
+.reviews-list .review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.product a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+/* 产品详情页样式 */
+.product-detail-page {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url('images/详情页背景/3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Noto Serif SC', serif;
+}
+
+.detail-header {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-main {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    gap: 40px;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/3.jpg') no-repeat center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.product-gallery {
+    flex: 1;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail-list {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thumbnail-list img:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.product-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.price {
+    font-size: 2em;
+    color: #e65100;
+    margin-bottom: 30px;
+}
+
+.description, .features {
+    margin-bottom: 30px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e65100;
+}
+
+.reviews-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/3.jpg') no-repeat center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.review-stats {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.average-rating {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.rating-number {
+    margin-bottom: 10px;
+}
+
+.big-rating {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.total {
+    font-size: 24px;
+    color: #666;
+}
+
+.star-rating {
+    color: #ffd700;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.star {
+    margin: 0 2px;
+}
+
+.star.filled {
+    color: #ffd700;
+}
+
+.star.half-filled {
+    position: relative;
+    display: inline-block;
+}
+
+.star.half-filled::after {
+    content: "★";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #ffd700;
+}
+
+.rating-count {
+    color: #666;
+    font-size: 14px;
+}
+
+.rating-distribution {
+    flex: 2;
+    padding: 20px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.rating-label {
+    width: 40px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.bar-container {
+    flex: 1;
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+.bar {
+    height: 100%;
+    background: #ffd700;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.rating-percent {
+    width: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+.review-form {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.rating-title {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.star-rating-select {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.star-rating-select input {
+    display: none;
+}
+
+.star-rating-select label {
+    font-size: 30px;
+    color: #ddd;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.star-rating-select label:hover,
+.star-rating-select label:hover ~ label,
+.star-rating-select input:checked ~ label {
+    color: #ffd700;
+}
+
+.comment-input textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    margin: 20px 0;
+    font-family: inherit;
+}
+
+.submit-review {
+    background: #e65100;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.submit-review:hover {
+    background: #d84315;
+    transform: translateY(-2px);
+}
+
+.reviews-list .review {
+    border-bottom: 1px solid #eee;
+    padding: 30px 0;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.review-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.review-content {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.review-images {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.review-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.review-images img:hover {
+    transform: scale(1.05);
+}
+
+.review-footer {
+    margin-top: 15px;
+}
+
+.helpful-btn {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.helpful-btn:hover {
+    background: #f5f5f5;
+    border-color: #ccc;
+}
+
+.helpful-icon {
+    margin-right: 5px;
+}
+
+/* 为了确保文字清晰可读，增加背景模糊效果 */
+.product-info, .review-form, .reviews-list {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* 产品描述的特殊样式 */
+.tea-title {
+    font-size: 1.8em;
+    color: #2c1810;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tea-features {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.tea-features h3 {
+    color: #8b4513;
+    margin: 20px 0 10px 0;
+    font-size: 1.3em;
+}
+
+.tea-features p {
+    line-height: 1.8;
+    margin: 10px 0;
+    color: #333;
+    text-align: justify;
+}
+
+.tea-effect {
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid #8b4513;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+/* 霸气山普洱茶详情页背景 */
+.product-detail-page.baqi-puer {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url('images/详情页背景/1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.baqi-puer .product-container {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/1.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.baqi-puer .reviews-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/1.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/* 古树白茶详情页背景 */
+.product-detail-page.gushu-white {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url('images/详情页背景/2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.gushu-white .product-container {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/2.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.gushu-white .reviews-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/2.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/* 丙山红茶详情页背景 */
+.product-detail-page.bingshan-black {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url('images/详情页背景/3.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bingshan-black .product-container {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/3.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.bingshan-black .reviews-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/3.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/* 小荒田普洱茶详情页背景 */
+.product-detail-page.xiaohuangtian-puer {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url('images/详情页背景/6.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.xiaohuangtian-puer .product-container {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/6.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.xiaohuangtian-puer .reviews-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('images/详情页背景/6.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/* 品牌故事样式 */
+.story-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.story-item {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.story-item:hover {
+    transform: translateY(-10px);
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.story-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    transform: translateY(70%);
+    transition: transform 0.3s ease;
+}
+
+.story-item:hover .story-overlay {
+    transform: translateY(0);
+}
+
+.story-overlay h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.story-overlay p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.story-item:hover .story-overlay p {
+    opacity: 1;
+}
+
+/* 添加平滑滚动效果 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 添加滚动指示器 */
+.scroll-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* 添加视差滚动效果 */
+.story-item {
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+
+.story-image {
+    transform: translateZ(-1px) scale(2);
+}
+
+/* 主页样式 */
+#home {
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+}
+
+.home-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.home-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+}
+
+.home-slide:first-child {
+    opacity: 1;
+}
+
+.home-slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.slide-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.slide-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.slide-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: white;
+    color: #333;
+}
+
+.slide-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+}

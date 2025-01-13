@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霸气山普洱茶（生茶）</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="product-detail-page baqi-puer">
+    <header class="detail-header">
+        <nav>
+            <ul>
+                <li><a href="index.html#products">返回产品分类</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="detail-main">
+        <div class="product-container">
+            <section class="product-gallery">
+                <div class="main-image">
+                    <img id="currentImage" src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）1.jpg" alt="霸气山普洱茶（生茶）">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）1.jpg" alt="霸气山普洱茶（生茶）" onclick="changeImage(this.src)">
+                    <img src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）2.jpg" alt="霸气山普洱茶（生茶）" onclick="changeImage(this.src)">
+                    <img src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）3.jpg" alt="霸气山普洱茶（生茶）" onclick="changeImage(this.src)">
+                    <img src="images/霸气山普洱茶（生茶）.jpg/霸气山普洱茶（生茶）/霸气山普洱茶（生茶）4.jpg" alt="霸气山普洱茶（生茶）" onclick="changeImage(this.src)">
+                </div>
+            </section>
+
+            <section class="product-info">
+                <h1>霸气山普洱茶（生茶）</h1>
+                <div class="price">¥200</div>
+                <div class="description">
+                    <h2>产品描述</h2>
+                    <p>品味高山云雾茶，感受百年茶韵，<br>
+                    来自云南高海拔，<br>
+                    优质生态产茶区域，<br>
+                    独特工艺赋予它醇滑与迷人香气，<br>
+                    一杯入喉，身心皆沉醉，<br>
+                    让高山云雾茶成为你生活的优雅陪伴</p>
+                </div>
+                <div class="features">
+                    <h2>特点</h2>
+                    <ul>
+                        <li>原料：古树茶菁</li>
+                        <li>产地：云南</li>
+                        <li>工艺：传统工艺</li>
+                        <li>储存：干燥避光</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <section class="reviews-section">
+            <h2>用户评论</h2>
+            <div class="review-stats">
+                <div class="average-rating">
+                    <div class="rating-number">
+                        <span class="big-rating">4.8</span>
+                        <span class="total">/5</span>
+                    </div>
+                    <div class="star-rating">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star half-filled">★</span>
+                    </div>
+                    <div class="rating-count">基于 238 条评论</div>
+                </div>
+                <div class="rating-distribution">
+                    <div class="rating-bar">
+                        <span class="rating-label">5星</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 75%"></div>
+                        </div>
+                        <span class="rating-percent">75%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-label">4星</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 15%"></div>
+                        </div>
+                        <span class="rating-percent">15%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-label">3星</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 7%"></div>
+                        </div>
+                        <span class="rating-percent">7%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-label">2星</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 2%"></div>
+                        </div>
+                        <span class="rating-percent">2%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-label">1星</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 1%"></div>
+                        </div>
+                        <span class="rating-percent">1%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-form">
+                <h3>写下您的评论</h3>
+                <form>
+                    <div class="rating-select">
+                        <p class="rating-title">点击星星评分</p>
+                        <div class="star-rating-select">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">★</label>
+                        </div>
+                    </div>
+                    <div class="comment-input">
+                        <textarea id="comment" name="comment" rows="4" placeholder="分享您对这款茶的感受..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-review">发布评论</button>
+                </form>
+            </div>
+
+            <div class="reviews-list">
+                <div class="review">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="images/avatar.png" alt="用户头像" class="avatar">
+                            <div class="reviewer-details">
+                                <span class="user-name">张先生</span>
+                                <div class="star-rating">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="review-date">2023-12-01</span>
+                    </div>
+                    <p class="review-content">茶质非常好，香气浓郁，回甘持久。包装也很精致，值得推荐！每一泡都能感受到茶叶的精心制作，确实是难得的好茶。</p>
+                    <div class="review-images">
+                        <img src="images/review1.jpg" alt="用户评论图片">
+                        <img src="images/review2.jpg" alt="用户评论图片">
+                    </div>
+                    <div class="review-footer">
+                        <button class="helpful-btn">
+                            <span class="helpful-icon">👍</span>
+                            有帮助 (23)
+                        </button>
+                    </div>
+                </div>
+                <!-- 更多评论 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 茶叶销售网站. 保留所有权利.</p>
+    </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('currentImage').src = src;
+        }
+    </script>
+</body>
+</html> 
